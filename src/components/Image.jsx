@@ -1,9 +1,7 @@
-import QrCode from "../img/qr-code.svg";
-
-function Image() {
+function Image({ imageSrc, imageClass }) {
   return (
     <>
-      <img src={QrCode} alt="logo.png" className="img-fluid img" />
+      <img src={imageSrc} alt="" className={`img-fluid ${imageClass}`} />
     </>
   );
 }

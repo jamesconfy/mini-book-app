@@ -1,17 +1,17 @@
 import { useState } from "react";
 
-function Form() {
+function Form({ onGenerate }) {
   const [text, setText] = useState("");
-  const [option, setOption] = useState("None");
+  // const [option, setOption] = useState("None");
 
   const onSubmitted = (e) => {
     e.preventDefault();
-    if (!text.startsWith("http") && !text.startsWith("https")) {
+    if (!text) {
       alert("Enter a valid url");
-    } else if (!text.includes(".com")) {
-      alert("Enter a valid url111");
+      // } else if (option === "None") {
+      //   alert("Enter a valid size");
     } else {
-      console.log("You passed");
+      onGenerate(text); // option);
     }
   };
 
@@ -26,7 +26,7 @@ function Form() {
           onChange={(e) => setText(e.target.value)}
         />
       </div>
-      <div className="mb-3">
+      {/* <div className="mb-3">
         <label className="form-label">Image Size</label>
         <select
           className="form-select"
@@ -43,7 +43,7 @@ function Form() {
           <option value="600x600">600 by 600</option>
           <option value="700x700">700 by 700</option>
         </select>
-      </div>
+      </div> */}
       <button type="submit" className="btn btn-primary form-control">
         Generate
       </button>

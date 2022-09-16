@@ -8,12 +8,23 @@
 }
 
 .my-container {
-  margin-top: 5em;
+  margin-top: 1em;
+}
+
+.image-div {
+  margin: auto;
 }
 
 .img {
   display: block;
   padding: 30px;
+}
+
+.generator-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 h1 {
@@ -22,4 +33,38 @@ h1 {
 
 p {
   font-size: large;
+}
+
+.mybtn {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: cadetblue;
+  margin-top: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer-list {
+  display: inline-flex;
+}
+
+.footer-list-li {
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.footer-list-li a {
+  display: block;
+  text-align: center;
+  color: aliceblue;
 }
